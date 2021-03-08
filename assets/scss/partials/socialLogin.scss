@@ -18,11 +18,17 @@
     }
   }
   .social-login--github {
+    a:visited {
+      color: white;
+    }
     background-color: $black;
     color: white;
   }
   .social-login--facebook {
-    background-color: #3a5998;
-    color: white;
+    a:visited {
+      color: black;
+    }
+    background-color: #fae100;
+    color: black;
   }
 }

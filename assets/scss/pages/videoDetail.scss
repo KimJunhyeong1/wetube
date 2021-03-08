@@ -9,6 +9,14 @@
     button {
       width: 100px;
       margin-bottom: 25px;
+      .video__author {
+        a:visited {
+          color: #3498db;
+        }
+        a {
+          color: #3498db;
+        }
+      }
     }
     .video__title,
     .video__views,
