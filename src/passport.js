@@ -28,7 +28,9 @@ passport.use(
     {
       clientID: process.env.KAKAO_ID,
       clientSecret: "",
-      callbackURL: "http://localhost:4000/auth/kakao/callback",
+      callbackURL: process.env.PRODUCTION
+        ? `https://enigmatic-hollows-74171.herokuapp.com/auth/kakao/callback`
+        : `http://localhost:4000/auth/kakao/callback`,
     },
     kakaoLoginCallback
   )
