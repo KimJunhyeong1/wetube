@@ -29,8 +29,8 @@ passport.use(
       clientID: process.env.KAKAO_ID,
       clientSecret: "",
       callbackURL: process.env.PRODUCTION
-        ? `https://wetube-junbro.herokuapp.com/auth/kakao/callback`
-        : `http://localhost:4000/auth/kakao/callback`,
+        ? "https://wetube-junbro.herokuapp.com/auth/kakao/callback"
+        : "http://localhost:4000/auth/kakao/callback",
     },
     kakaoLoginCallback
   )
