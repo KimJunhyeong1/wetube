@@ -16,7 +16,7 @@ passport.use(
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
       redirect_uri: process.env.PRODUCTION
-        ? `https://enigmatic-hollows-74171.herokuapp.com${routes.githubCallback}`
+        ? `https://wetube-junbro.herokuapp.com${routes.githubCallback}`
         : `https://localhost:4000${routes.githubCallback}`,
     },
     githubLoginCallback
@@ -29,7 +29,7 @@ passport.use(
       clientID: process.env.KAKAO_ID,
       clientSecret: "",
       callbackURL: process.env.PRODUCTION
-        ? `https://enigmatic-hollows-74171.herokuapp.com/auth/kakao/callback`
+        ? `https://wetube-junbro.herokuapp.com/auth/kakao/callback`
         : `http://localhost:4000/auth/kakao/callback`,
     },
     kakaoLoginCallback
