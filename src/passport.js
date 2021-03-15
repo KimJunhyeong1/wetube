@@ -15,7 +15,9 @@ passport.use(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      redirect_uri: `http://localhost:4000/${routes.githubCallback}`,
+      redirect_uri: process.env.PRODUCTION
+        ? `https://enigmatic-hollows-74171.herokuapp.com${routes.githubCallback}`
+        : `https://localhost:4000${routes.githubCallback}`,
     },
     githubLoginCallback
   )
