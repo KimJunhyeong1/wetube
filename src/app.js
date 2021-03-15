@@ -47,7 +47,7 @@ app.use(
     secret: process.env.COOKIE_SECRET,
     resave: true,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL }),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL_PROD }),
   })
 );
 app.use(passport.initialize());
