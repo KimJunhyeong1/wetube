@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 import passport from "passport";
 import mongoose from "mongoose";
 import MongoStore from "connect-mongo";
+import flash from "express-flash";
 import path from "path";
 import session from "express-session";
 import userRouter from "./routers/userRouter";
@@ -53,6 +54,9 @@ app.use(
     }),
   })
 );
+
+app.use(flash());
+
 app.use(passport.initialize());
 app.use(passport.session());
 
